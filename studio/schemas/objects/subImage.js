@@ -1,11 +1,23 @@
 export default {
-  name: 'mainImage',
+  name: 'subImage',
   type: 'image',
   title: 'Image',
   options: {
     hotspot: true
   },
   fields: [
+    {
+      name: 'size',
+      type: 'string',
+      description: "Select how the image will be shown",
+      title: 'Image Size',
+      options: {
+        list: ['large','medium','small'],
+        layout: 'radio',
+        direction: 'horizontal',
+        isHighlighted: true
+      }
+    },
     {
       name: 'alt',
       type: 'string',
@@ -24,11 +36,5 @@ export default {
         isHighlighted: true
       }
     }
-  ],
-  preview: {
-    select: {
-      imageUrl: 'asset.url',
-      title: 'caption'
-    }
-  }
+  ]
 }
